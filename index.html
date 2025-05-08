@@ -2,109 +2,631 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Vikas Kumar | Flutter Developer Portfolio</title>
-    <style>
-        body {
-          font-family: 'Segoe UI', sans-serif;
-          margin: 0;
-          background: #f9f9f9;
-          color: #333;
-        }
-        header {
-          background-color: #0d47a1;
-          color: white;
-          padding: 40px 20px;
-          text-align: center;
-        }
-        h1 { margin-bottom: 10px; }
-        nav a {
-          color: white;
-          margin: 0 10px;
-          text-decoration: none;
-          font-weight: bold;
-        }
-        section {
-          padding: 40px 20px;
-          max-width: 900px;
-          margin: auto;
-        }
-        .card {
-          background: white;
-          border-radius: 10px;
-          padding: 20px;
-          box-shadow: 0 0 10px rgba(0,0,0,0.1);
-          margin-bottom: 20px;
-        }
-        .skills span {
-          background: #e3f2fd;
-          padding: 6px 10px;
-          margin: 5px;
-          display: inline-block;
-          border-radius: 6px;
-        }
-        footer {
-          background: #0d47a1;
-          color: white;
-          text-align: center;
-          padding: 20px;
-        }
-        a { color: #0d47a1; }
-    </style>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vikas Vishwakarma | Flutter Team Lead</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
+<!-- Navigation -->
+<nav class="navbar">
+    <div class="container">
+        <div class="logo">
+            <span class="text-gradient">Vikas V.</span>
+        </div>
+        <div class="nav-links" id="navLinks">
+            <i class="fas fa-times" id="closeMenu"></i>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#freelance">Freelance</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+        <i class="fas fa-bars" id="openMenu"></i>
+    </div>
+</nav>
 
-<header>
-    <h1>Vikas Kumar</h1>
-    <p>Flutter Developer | Firebase | React Native</p>
-    <nav>
-        <a href="#about">About</a>
-        <a href="#skills">Skills</a>
-        <a href="#projects">Projects</a>
-        <a href="#contact">Contact</a>
-    </nav>
-</header>
-
-<section id="about" class="card">
-    <h2>About Me</h2>
-    <p>I’m a passionate Flutter developer with a B.Tech. in Electrical Engineering from Dr. RLAU Ayodhya. I’ve worked with companies like Pinak AI Innovations and TechiData, building beautiful and scalable mobile apps. I love creating impactful UI/UX and handling real-time features with Firebase.</p>
-</section>
-
-<section id="skills" class="card">
-    <h2>Skills</h2>
-    <div class="skills">
-        <span>Flutter</span>
-        <span>Dart</span>
-        <span>Firebase</span>
-        <span>React Native</span>
-        <span>JavaScript</span>
-        <span>HTML</span>
-        <span>CSS</span>
-        <span>Git</span>
-        <span>Figma</span>
-        <span>C++</span>
+<!-- Hero Section -->
+<section id="home" class="hero">
+    <div class="container">
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1 class="reveal-text">Hi <span class="wave">👋</span>, I'm <span class="text-gradient">Vikas Vishwakarma</span></h1>
+                <div class="typing-container">
+                    <span id="typing-text"></span><span class="cursor">|</span>
+                </div>
+                <p class="reveal-text-delay">Mobile Developer and Full Stack Developer</p>
+                <p class="reveal-text-delay">Open to Freelance & Remote Projects</p>
+                <div class="cta-buttons">
+                    <a href="#contact" class="btn btn-primary">Contact Me</a>
+                    <a href="#projects" class="btn btn-secondary">View Projects</a>
+                </div>
+                <div class="social-icons">
+                    <a href="https://linkedin.com/in/vikas-vishwakarma3000" target="_blank"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://github.com/vikas3000" target="_blank"><i class="fab fa-github"></i></a>
+                    <a href="mailto:VIKAS.VISHWAKARMA3000@GMAIL.COM"><i class="fas fa-envelope"></i></a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="https://cdn.dribbble.com/users/1162077/screenshots/3848914/programmer.gif" alt="Coding Animation">
+            </div>
+        </div>
     </div>
 </section>
 
-<section id="projects" class="card">
-    <h2>Projects</h2>
-    <ul>
-        <li><strong>Mentorship App</strong>: Flutter + Next.js backend, with messaging, video/audio call, and copy evaluation features.</li>
-        <li><strong>Cab App</strong>: React Native with Google Maps API, real-time driver tracking and booking.</li>
-        <li><strong>Personal Productivity App</strong>: Built using Flutter and Firebase with local storage and sync support.</li>
-    </ul>
+<!-- About Section -->
+<section id="about" class="about section-padding">
+    <div class="container">
+        <div class="section-header">
+            <h2>About <span class="text-gradient">Me</span></h2>
+            <div class="section-divider"></div>
+        </div>
+        <div class="about-content">
+            <div class="about-image">
+                <div class="about-image-wrapper">
+                    <div class="code-block">
+                            <pre><code>
+const vikas = {
+  position: "Flutter Team Lead @ TechiData",
+  location: "New Delhi, India",
+  expertise: ["Flutter", "Dart", "Firebase", "MERN Stack"],
+  currentFocus: "Developing high-performance cross-platform applications",
+};
+                            </code></pre>
+                    </div>
+                </div>
+            </div>
+            <div class="about-text">
+                <div class="about-info">
+                    <h3>Flutter Team Lead</h3>
+                    <p>I'm a passionate Flutter Team Lead with extensive experience in mobile app development and a strong foundation in full-stack development. I specialize in creating high-performance cross-platform applications that deliver exceptional user experiences.</p>
+
+                    <ul class="about-list">
+                        <li><i class="fas fa-rocket"></i> Currently working as <strong>Flutter Team Lead at TechiData</strong></li>
+                        <li><i class="fas fa-code-branch"></i> Deep diving into <strong>Advanced Flutter, Node.js, MongoDB, Express.js</strong></li>
+                        <li><i class="fas fa-comment-dots"></i> Ask me about <strong>Flutter, Dart, MERN, Firebase, REST API</strong></li>
+                        <li><i class="fas fa-envelope"></i> Reach me at <strong>VIKAS.VISHWAKARMA3000@GMAIL.COM</strong></li>
+                        <li><i class="fas fa-briefcase"></i> Open to <strong>Freelance & Remote Projects</strong></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
 </section>
 
-<section id="contact" class="card">
-    <h2>Contact</h2>
-    <p>Email: <a href="mailto:your.email@example.com">your.email@example.com</a></p>
-    <p>GitHub: <a href="https://github.com/vikas3000" target="_blank">github.com/vikas3000</a></p>
-    <p>Location: Noida, Uttar Pradesh, India</p>
+<!-- Skills Section -->
+<section id="skills" class="skills section-padding">
+    <div class="container">
+        <div class="section-header">
+            <h2>My <span class="text-gradient">Skills</span></h2>
+            <div class="section-divider"></div>
+        </div>
+
+        <div class="skills-categories">
+            <!-- Mobile Development -->
+            <div class="skill-category">
+                <h3><i class="fas fa-mobile-alt"></i> Mobile Development</h3>
+                <div class="skills-group">
+                    <div class="skill-item">
+                        <div class="skill-info">
+                            <span>Flutter</span>
+                            <span>95%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-progress="95"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-info">
+                            <span>Dart</span>
+                            <span>92%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-progress="92"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Frontend Development -->
+            <div class="skill-category">
+                <h3><i class="fas fa-code"></i> Frontend</h3>
+                <div class="skills-group">
+                    <div class="skill-item">
+                        <div class="skill-info">
+                            <span>HTML/CSS</span>
+                            <span>85%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-progress="85"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-info">
+                            <span>JavaScript</span>
+                            <span>80%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-progress="80"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-info">
+                            <span>React</span>
+                            <span>75%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-progress="75"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Backend & Database -->
+            <div class="skill-category">
+                <h3><i class="fas fa-server"></i> Backend & Database</h3>
+                <div class="skills-group">
+                    <div class="skill-item">
+                        <div class="skill-info">
+                            <span>Firebase</span>
+                            <span>88%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-progress="88"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-info">
+                            <span>Node.js</span>
+                            <span>70%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-progress="70"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-info">
+                            <span>MongoDB</span>
+                            <span>65%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-progress="65"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-info">
+                            <span>REST API</span>
+                            <span>90%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-progress="90"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Other Skills -->
+            <div class="skill-category">
+                <h3><i class="fas fa-tools"></i> Other Skills</h3>
+                <div class="skills-tags">
+                    <span class="skill-tag">Provider</span>
+                    <span class="skill-tag">BLoC</span>
+                    <span class="skill-tag">GetX</span>
+                    <span class="skill-tag">Figma</span>
+                    <span class="skill-tag">Adobe XD</span>
+                    <span class="skill-tag">Git</span>
+                    <span class="skill-tag">CI/CD</span>
+                    <span class="skill-tag">Custom Animations</span>
+                    <span class="skill-tag">Responsive Design</span>
+                </div>
+            </div>
+        </div>
+    </div>
 </section>
 
-<footer>
-    <p>&copy; 2025 Vikas Kumar. All rights reserved.</p>
-</footer>
+<!-- Experience Section -->
+<section id="experience" class="experience section-padding">
+    <div class="container">
+        <div class="section-header">
+            <h2>Work <span class="text-gradient">Experience</span></h2>
+            <div class="section-divider"></div>
+        </div>
 
-</body>
-</html>
+        <div class="timeline">
+            <!-- TechiData - Team Lead -->
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <div class="timeline-header">
+                        <h3>Flutter Team Lead</h3>
+                        <span class="company">TechiData</span>
+                        <span class="date">September 2024 - Present</span>
+                    </div>
+                    <div class="timeline-body">
+                        <ul>
+                            <li><span class="highlight">🚀</span> Leadership: managing project timelines and code reviews</li>
+                            <li><span class="highlight">📚</span> EdTech Application: Spearheaded development of Exaministry, a UPSC preparation platform featuring AI-powered test analysis and personalized learning paths</li>
+                            <li><span class="highlight">🚕</span> Taxi Application: Architected and developed a ride-sharing application with real-time tracking, secure payment integration, and driver-passenger matching algorithms</li>
+                            <li><span class="highlight">🛒</span> E-commerce Platform: Designed and implemented a scalable e-commerce solution with inventory management, payment gateway integration, and personalized recommendations</li>
+                            <li><span class="highlight">🔧</span> Technical Excellence: Implemented clean architecture principles, improving app performance by 40% and reducing build size by 25%</li>
+                            <li><span class="highlight">👨‍🏫</span> Mentorship: Conducted code reviews and knowledge-sharing sessions to enhance team skills and code quality</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Pinak AI -->
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <div class="timeline-header">
+                        <h3>Flutter Developer / Frontend Developer</h3>
+                        <span class="company">Pinak AI Innovations</span>
+                        <span class="date">September 2023 - September 2024</span>
+                    </div>
+                    <div class="timeline-body">
+                        <ul>
+                            <li><span class="highlight">🤖</span> Developed PaiGPT, an AI-powered answer engine targeting government exam aspirants, journalists, and researchers</li>
+                            <li><span class="highlight">📄</span> Implemented document analysis capabilities with OCR and machine learning integration for intelligent content processing</li>
+                            <li><span class="highlight">🌐</span> Built responsive web interfaces using Flutter Web, HTML, and CSS, ensuring cross-platform consistency</li>
+                            <li><span class="highlight">⚡</span> Integrated real-time API communication for content fetching and user interaction with 99.9% uptime</li>
+                            <li><span class="highlight">🧠</span> Collaborated with AI engineers to optimize model response times and enhance user experience</li>
+                            <li><span class="highlight">🚀</span> Reduced application load time by 35% through code optimization and efficient state management</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- TechiData - Flutter Developer -->
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <div class="timeline-header">
+                        <h3>Flutter Developer</h3>
+                        <span class="company">TechiData</span>
+                        <span class="date">July 2022 - July 2023</span>
+                    </div>
+                    <div class="timeline-body">
+                        <ul>
+                            <li><span class="highlight">👥</span> Developed Multiples, a job marketplace application connecting job seekers with employers</li>
+                            <li><span class="highlight">🔐</span> Implemented secure user authentication and profile management using Firebase Authentication</li>
+                            <li><span class="highlight">💬</span> Built real-time chat functionality for employer-candidate communication with push notifications</li>
+                            <li><span class="highlight">🎨</span> Created custom UI components and animations to enhance user engagement</li>
+                            <li><span class="highlight">🔄</span> Integrated RESTful APIs for job listings, user profiles, and application tracking</li>
+                            <li><span class="highlight">📊</span> Participated in sprint planning and delivered features on time with 95% test coverage</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Projects Section -->
+<section id="projects" class="projects section-padding">
+    <div class="container">
+        <div class="section-header">
+            <h2>Featured <span class="text-gradient">Projects</span></h2>
+            <div class="section-divider"></div>
+        </div>
+
+        <div class="project-filter">
+            <button class="filter-btn active" data-filter="all">All</button>
+            <button class="filter-btn" data-filter="mobile">Mobile</button>
+            <button class="filter-btn" data-filter="web">Web</button>
+            <button class="filter-btn" data-filter="ai">AI</button>
+        </div>
+
+        <div class="project-grid">
+            <!-- Exaministry Project -->
+            <div class="project-card" data-category="mobile education">
+                <div class="project-header">
+                    <div class="project-icon">📚</div>
+                    <h3>Exaministry</h3>
+                </div>
+                <div class="project-content">
+                    <p class="project-subtitle">UPSC Preparation Platform</p>
+                    <p class="project-description">Comprehensive EdTech application providing structured learning paths for UPSC aspirants.</p>
+                    <div class="project-tech">
+                        <span>Flutter</span>
+                        <span>Dart</span>
+                        <span>Firebase</span>
+                        <span>AI</span>
+                    </div>
+                    <div class="project-details">
+                        <ul>
+                            <li>AI-powered test analysis to identify knowledge gaps</li>
+                            <li>Interactive quiz modules with performance analytics</li>
+                            <li>Video streaming with bookmarking features</li>
+                            <li>Offline content accessibility</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PaiGPT Project -->
+            <div class="project-card" data-category="web ai">
+                <div class="project-header">
+                    <div class="project-icon">🤖</div>
+                    <h3>PaiGPT</h3>
+                </div>
+                <div class="project-content">
+                    <p class="project-subtitle">AI-Powered Answer Engine</p>
+                    <p class="project-description">Innovative AI solution addressing limitations in text, image, and document analysis.</p>
+                    <div class="project-tech">
+                        <span>Flutter</span>
+                        <span>HTML/CSS</span>
+                        <span>Machine Learning</span>
+                        <span>Firebase</span>
+                    </div>
+                    <div class="project-details">
+                        <ul>
+                            <li>Customized test series for competitive examinations</li>
+                            <li>Document parsing and intelligent content extraction</li>
+                            <li>Responsive interfaces for mobile and web platforms</li>
+                            <li>Secure payment gateway for premium features</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Shop24u Project -->
+            <div class="project-card" data-category="mobile">
+                <div class="project-header">
+                    <div class="project-icon">🛒</div>
+                    <h3>Shop24u</h3>
+                </div>
+                <div class="project-content">
+                    <p class="project-subtitle">E-Commerce Application</p>
+                    <p class="project-description">Cross-platform e-commerce application with product catalog, cart management, and order tracking.</p>
+                    <div class="project-tech">
+                        <span>Flutter</span>
+                        <span>Dart</span>
+                        <span>Firebase</span>
+                        <span>Payment Gateway</span>
+                    </div>
+                    <div class="project-details">
+                        <ul>
+                            <li>Secure payment processing with multiple gateways</li>
+                            <li>User authentication with social media integration</li>
+                            <li>Admin dashboard for inventory management</li>
+                            <li>Push notifications for order updates</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- First Care Project -->
+            <div class="project-card" data-category="mobile">
+                <div class="project-header">
+                    <div class="project-icon">⚕️</div>
+                    <h3>First Care</h3>
+                </div>
+                <div class="project-content">
+                    <p class="project-subtitle">Healthcare Management App</p>
+                    <p class="project-description">Comprehensive healthcare application enabling direct doctor consultation and appointment booking.</p>
+                    <div class="project-tech">
+                        <span>Flutter</span>
+                        <span>Dart</span>
+                        <span>Firebase</span>
+                        <span>RESTful APIs</span>
+                    </div>
+                    <div class="project-details">
+                        <ul>
+                            <li>Secure payment gateway for consultations</li>
+                            <li>Medication tracking system with reminders</li>
+                            <li>Glucose level monitoring with insulin calculation</li>
+                            <li>Video streaming for healthcare education</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Freelance Section -->
+<section id="freelance" class="freelance section-padding">
+    <div class="container">
+        <div class="section-header">
+            <h2>Freelance <span class="text-gradient">Services</span></h2>
+            <div class="section-divider"></div>
+        </div>
+
+        <div class="freelance-content">
+            <div class="freelance-intro">
+                <p>I'm available for freelance projects, specializing in developing high-quality mobile applications with Flutter and web solutions with the MERN stack. Let's bring your ideas to life!</p>
+            </div>
+
+            <div class="services-grid">
+                <!-- Mobile App Development -->
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <h3>Mobile App Development</h3>
+                    <p>Full-cycle Flutter application development for iOS and Android with clean architecture and performance optimization.</p>
+                </div>
+
+                <!-- Web Development -->
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <h3>Web Development</h3>
+                    <p>Responsive web applications using React.js and modern frameworks with seamless user experience across all devices.</p>
+                </div>
+
+                <!-- Cross-Platform Solutions -->
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-laptop-code"></i>
+                    </div>
+                    <h3>Cross-Platform Solutions</h3>
+                    <p>Unified codebase for mobile, web, and desktop platforms reducing development time and maintenance costs.</p>
+                </div>
+
+                <!-- App Maintenance -->
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-tools"></i>
+                    </div>
+                    <h3>App Maintenance & Upgrades</h3>
+                    <p>Performance optimization and feature implementation for existing applications to keep them up-to-date.</p>
+                </div>
+
+                <!-- Code Review -->
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-search-plus"></i>
+                    </div>
+                    <h3>Code Review & Consultation</h3>
+                    <p>Technical assessment and architecture planning to ensure best practices and scalable solutions.</p>
+                </div>
+
+                <!-- Firebase Integration -->
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-database"></i>
+                    </div>
+                    <h3>Firebase Integration</h3>
+                    <p>Authentication, real-time database, cloud functions, and analytics to power your application backend.</p>
+                </div>
+            </div>
+
+            <div class="hire-cta">
+                <h3>Why Work With Me:</h3>
+                <ul class="hire-benefits">
+                    <li><i class="fas fa-check-circle"></i> <strong>Proven Track Record:</strong> Successfully delivered 20+ projects for clients worldwide</li>
+                    <li><i class="fas fa-check-circle"></i> <strong>Clean & Efficient Code:</strong> Following best practices and design patterns</li>
+                    <li><i class="fas fa-check-circle"></i> <strong>Timely Delivery:</strong> Respecting deadlines and providing regular updates</li>
+                    <li><i class="fas fa-check-circle"></i> <strong>Excellent Communication:</strong> Clear and responsive throughout the project lifecycle</li>
+                    <li><i class="fas fa-check-circle"></i> <strong>Post-Launch Support:</strong> Continued assistance after project completion</li>
+                </ul>
+                <div class="cta-buttons">
+                    <a href="mailto:VIKAS.VISHWAKARMA3000@GMAIL.COM" class="btn btn-primary">Hire Me For Your Next Project</a>
+                    <a href="https://www.upwork.com/freelancers/YOUR_PROFILE" target="_blank" class="btn btn-secondary">Upwork Profile</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Education Section -->
+<section id="education" class="education section-padding">
+    <div class="container">
+        <div class="section-header">
+            <h2>My <span class="text-gradient">Education</span></h2>
+            <div class="section-divider"></div>
+        </div>
+
+        <div class="education-timeline">
+            <!-- B.Tech -->
+            <div class="edu-item">
+                <div class="edu-dot"></div>
+                <div class="edu-content">
+                    <h3>B.Tech. - Electrical Engineering</h3>
+                    <p class="edu-institute">Institute of Engineering and Technology, Dr. RLAU Ayodhya</p>
+                    <p class="edu-date">2018 - 2022</p>
+                </div>
+            </div>
+
+            <!-- 12th Education -->
+            <div class="edu-item">
+                <div class="edu-dot"></div>
+                <div class="edu-content">
+                    <h3>12th - UP Board</h3>
+                    <p class="edu-institute">A J I C P V Katra Gulab Singh, Pratapgarh</p>
+                    <p class="edu-date">2017</p>
+                </div>
+            </div>
+
+            <!-- 10th Education -->
+            <div class="edu-item">
+                <div class="edu-dot"></div>
+                <div class="edu-content">
+                    <h3>10th - UP Board</h3>
+                    <p class="edu-institute">A J I C P V Katra Gulab Singh, Pratapgarh</p>
+                    <p class="edu-date">2015</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Blog Section -->
+<section id="blog" class="blog section-padding">
+    <div class="container">
+        <div class="section-header">
+            <h2>Latest <span class="text-gradient">Blog Posts</span></h2>
+            <div class="section-divider"></div>
+        </div>
+
+        <div class="blog-grid">
+            <!-- Blog Post 1 -->
+            <div class="blog-card">
+                <div class="blog-card-img">
+                    <img src="/api/placeholder/400/250" alt="AI Agents Blog" />
+                    <div class="blog-date">May 2025</div>
+                </div>
+                <div class="blog-card-content">
+                    <h3>The Evolution & Impact of AI Agents: What You Need to Know</h3>
+                    <p>Exploring how AI agents are transforming industries and what this means for the future of work and technology.</p>
+                    <div class="blog-tags">
+                        <span>AI</span>
+                        <span>Technology</span>
+                        <span>Future of Work</span>
+                    </div>
+                    <a href="https://www.linkedin.com/pulse/evolution-impact-ai-agents-what-you-need-know-vikas-vishwakarma-nfxcc/" class="read-more">Read More</a>
+                </div>
+            </div>
+
+            <!-- Blog Post Placeholder 1 -->
+            <div class="blog-card coming-soon">
+                <div class="blog-card-img">
+                    <img src="/api/placeholder/400/250" alt="Flutter Blog" />
+                    <div class="blog-date">Coming Soon</div>
+                </div>
+                <div class="blog-card-content">
+                    <h3>Flutter 3.0: The Future of Cross-Platform Development</h3>
+                    <p>Exploring the latest features and improvements in Flutter 3.0 and how they impact mobile app development.</p>
+                    <div class="blog-tags">
+                        <span>Flutter</span>
+                        <span>Mobile</span>
+                        <span>Development</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Blog Post Placeholder 2 -->
+            <div class="blog-card coming-soon">
+                <div class="blog-card-img">
+                    <img src="/api/placeholder/400/250" alt="Firebase Blog" />
+                    <div class="blog-date">Coming Soon</div>
+                </div>
+                <div class="blog-card-content">
+                    <h3>Mastering Firebase: Best Practices for Mobile Apps</h3>
+                    <p>Learn how to leverage Firebase services effectively to build secure, scalable, and feature-rich mobile applications.</p>
+                    <div class="blog-tags">
+                        <span>Firebase</span>
+                        <span>Security</span>
+                        <span>Mobile</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="blog-cta">
+            <a href="https://www.linkedin.com/in/vikas-vishwakarma3000/recent-activity/articles/" class="btn btn-secondary">Read More Blog Posts</a>
+        </div>
+    </div>
+</section>
+
