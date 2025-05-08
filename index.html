@@ -1,21 +1,110 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Vikas's Portfolio</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Vikas Kumar | Flutter Developer Portfolio</title>
     <style>
-        body { font-family: Arial; background: #f2f2f2; padding: 30px; }
-        .container { background: white; padding: 20px; max-width: 700px; margin: auto; border-radius: 10px; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
-        h1 { color: #333; }
-        a { color: #007bff; text-decoration: none; }
+        body {
+          font-family: 'Segoe UI', sans-serif;
+          margin: 0;
+          background: #f9f9f9;
+          color: #333;
+        }
+        header {
+          background-color: #0d47a1;
+          color: white;
+          padding: 40px 20px;
+          text-align: center;
+        }
+        h1 { margin-bottom: 10px; }
+        nav a {
+          color: white;
+          margin: 0 10px;
+          text-decoration: none;
+          font-weight: bold;
+        }
+        section {
+          padding: 40px 20px;
+          max-width: 900px;
+          margin: auto;
+        }
+        .card {
+          background: white;
+          border-radius: 10px;
+          padding: 20px;
+          box-shadow: 0 0 10px rgba(0,0,0,0.1);
+          margin-bottom: 20px;
+        }
+        .skills span {
+          background: #e3f2fd;
+          padding: 6px 10px;
+          margin: 5px;
+          display: inline-block;
+          border-radius: 6px;
+        }
+        footer {
+          background: #0d47a1;
+          color: white;
+          text-align: center;
+          padding: 20px;
+        }
+        a { color: #0d47a1; }
     </style>
 </head>
 <body>
-<div class="container">
-    <h1>Hi, I'm Vikas 👋</h1>
-    <p>I’m a freelance Flutter Developer building mobile apps that people love!</p>
-    <p><strong>Skills:</strong> Flutter, Dart, Firebase, React Native, JavaScript</p>
-    <p><strong>Contact:</strong> <a href="mailto:your.email@example.com">your.email@example.com</a></p>
-    <p><strong>GitHub:</strong> <a href="https://github.com/vikas3000">github.com/vikas3000</a></p>
-</div>
+
+<header>
+    <h1>Vikas Kumar</h1>
+    <p>Flutter Developer | Firebase | React Native</p>
+    <nav>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+    </nav>
+</header>
+
+<section id="about" class="card">
+    <h2>About Me</h2>
+    <p>I’m a passionate Flutter developer with a B.Tech. in Electrical Engineering from Dr. RLAU Ayodhya. I’ve worked with companies like Pinak AI Innovations and TechiData, building beautiful and scalable mobile apps. I love creating impactful UI/UX and handling real-time features with Firebase.</p>
+</section>
+
+<section id="skills" class="card">
+    <h2>Skills</h2>
+    <div class="skills">
+        <span>Flutter</span>
+        <span>Dart</span>
+        <span>Firebase</span>
+        <span>React Native</span>
+        <span>JavaScript</span>
+        <span>HTML</span>
+        <span>CSS</span>
+        <span>Git</span>
+        <span>Figma</span>
+        <span>C++</span>
+    </div>
+</section>
+
+<section id="projects" class="card">
+    <h2>Projects</h2>
+    <ul>
+        <li><strong>Mentorship App</strong>: Flutter + Next.js backend, with messaging, video/audio call, and copy evaluation features.</li>
+        <li><strong>Cab App</strong>: React Native with Google Maps API, real-time driver tracking and booking.</li>
+        <li><strong>Personal Productivity App</strong>: Built using Flutter and Firebase with local storage and sync support.</li>
+    </ul>
+</section>
+
+<section id="contact" class="card">
+    <h2>Contact</h2>
+    <p>Email: <a href="mailto:your.email@example.com">your.email@example.com</a></p>
+    <p>GitHub: <a href="https://github.com/vikas3000" target="_blank">github.com/vikas3000</a></p>
+    <p>Location: Noida, Uttar Pradesh, India</p>
+</section>
+
+<footer>
+    <p>&copy; 2025 Vikas Kumar. All rights reserved.</p>
+</footer>
+
 </body>
 </html>
