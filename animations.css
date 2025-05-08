@@ -5,7 +5,7 @@
   background: currentColor;
   height: 1.1em;
   margin-left: 2px;
-  animation: blink 0.8s steps(1) infinite;
+  animation: blink 0.75s steps(1) infinite;
   vertical-align: middle;
 }
 
@@ -15,6 +15,6 @@
 }
 
 /* Extra section entry/exit transitions (supplement to AOS) */
-.section, .project-card, .timeline-entry {
-  transition: box-shadow 0.22s, background 0.22s, transform 0.22s;
+.section, .project-card, .timeline-entry, .education-card, .skill-bar {
+  transition: box-shadow 0.22s, background 0.22s, transform 0.22s, color 0.15s;
 }

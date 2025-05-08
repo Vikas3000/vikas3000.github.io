@@ -1,5 +1,3 @@
-// Resume Data for Dynamic Portfolio
-
 const aboutMe = `
 I’m Vikas Vishwakarma, a passionate Flutter Team Lead based in New Delhi, India. I specialize in building high-performance cross-platform mobile and web apps, leading teams, and crafting seamless user experiences. My journey spans EdTech, e-commerce, AI-powered engines, and healthcare, always focusing on clean architecture and scalable solutions.<br><br>
 <strong>Let's build something amazing together!</strong>
@@ -57,7 +55,7 @@ const projects = [
     name: "Exaministry - UPSC Preparation Platform",
     year: "2024",
     stack: "Flutter, Dart, Firebase, REST API, AI Integration",
-    img: "assets/project-edtech.png",
+    img: "https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&q=80&w=400",
     description: [
       "Comprehensive EdTech app for UPSC aspirants.",
       "AI-powered test analysis & study recommendations.",
@@ -72,7 +70,7 @@ const projects = [
     name: "PaiGPT - AI-Powered Answer Engine",
     year: "2023-24",
     stack: "Flutter, Dart, ML, Firebase, REST API",
-    img: "assets/project-ml.png",
+    img: "https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&q=80&w=400",
     description: [
       "Innovative AI for text/image/document analysis.",
       "Custom test series with adaptive difficulty.",
@@ -87,7 +85,7 @@ const projects = [
     name: "Shop24u - E-Commerce Application",
     year: "2023",
     stack: "Flutter, Dart, Firebase, REST API",
-    img: "assets/project-ecommerce.png",
+    img: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&q=80&w=400",
     description: [
       "Cross-platform e-commerce app: catalog, cart, order tracking.",
       "Multiple payment gateways, social login.",
@@ -100,7 +98,7 @@ const projects = [
     name: "Teachers App - Educational Management Solution",
     year: "2022",
     stack: "Flutter, Dart, Firebase, RESTful APIs",
-    img: "assets/project-edu.png",
+    img: "https://images.unsplash.com/photo-1503676382389-4809596d5290?auto=format&q=80&w=400",
     description: [
       "Comprehensive school management app.",
       "Synced via APIs, responsive Figma UI.",
@@ -112,7 +110,7 @@ const projects = [
     name: "First Care - Healthcare Management App",
     year: "2022",
     stack: "Flutter, Dart, Firebase, REST APIs",
-    img: "assets/project-health.png",
+    img: "https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&q=80&w=400",
     description: [
       "Healthcare app: doctor consult, appointment, payments.",
       "Medication tracking, push reminders.",

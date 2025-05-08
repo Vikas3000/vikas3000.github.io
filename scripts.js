@@ -15,7 +15,7 @@ function typeWriter() {
     charIndex++;
     if (charIndex === current.length) {
       isDeleting = true;
-      setTimeout(typeWriter, 1200);
+      setTimeout(typeWriter, 1100);
       return;
     }
   } else {
@@ -26,27 +26,29 @@ function typeWriter() {
       tIndex = (tIndex + 1) % typewriterTexts.length;
     }
   }
-  setTimeout(typeWriter, isDeleting ? 70 : 120);
+  setTimeout(typeWriter, isDeleting ? 55 : 110);
 }
 typeWriter();
 
 // Populate About
 document.getElementById('aboutText').innerHTML = aboutMe;
 
-// Populate Skills
+// Populate Skills with animated bars
 const skillsContainer = document.getElementById('skillsList');
-skills.forEach(skill => {
+skills.forEach((skill, i) => {
   const el = document.createElement('div');
-  el.className = 'skill-card';
+  el.className = 'skill-bar';
+  el.style.animationDelay = `${i * 0.07 + 0.2}s`;
   el.innerText = skill;
   skillsContainer.appendChild(el);
 });
 
 // Populate Experience Timeline
 const expContainer = document.getElementById('experienceList');
-experience.forEach(exp => {
+experience.forEach((exp, i) => {
   const entry = document.createElement('div');
   entry.className = 'timeline-entry';
+  entry.style.animationDelay = `${i * 0.18 + 0.2}s`;
   entry.innerHTML = `
     <h3>${exp.title} @ ${exp.company}</h3>
     <div class="period">${exp.period}</div>
@@ -57,11 +59,12 @@ experience.forEach(exp => {
 
 // Populate Projects
 const projContainer = document.getElementById('projectsList');
-projects.forEach(proj => {
+projects.forEach((proj, i) => {
   const card = document.createElement('div');
   card.className = 'project-card';
+  card.style.animationDelay = `${i * 0.15 + 0.2}s`;
   card.innerHTML = `
-    <img src="${proj.img}" alt="${proj.name}" onerror="this.src='assets/flutter-icon.png'"/>
+    <img src="${proj.img}" alt="${proj.name}" onerror="this.src='https://img.icons8.com/color/96/flutter.png'"/>
     <h3>${proj.name}</h3>
     <div class="project-meta">${proj.year} &nbsp;|&nbsp; ${proj.stack}</div>
     <ul>${proj.description.map(d => `<li>${d}</li>`).join('')}</ul>
@@ -74,9 +77,10 @@ projects.forEach(proj => {
 
 // Populate Education
 const eduContainer = document.getElementById('educationList');
-education.forEach(edu => {
+education.forEach((edu, i) => {
   const card = document.createElement('div');
   card.className = 'education-card';
+  card.style.animationDelay = `${i * 0.14 + 0.2}s`;
   card.innerHTML = `
     <b>${edu.degree}</b><br>
     <span>${edu.place}</span><br>
@@ -96,7 +100,7 @@ if (localStorage.getItem('dark') === '1') document.body.classList.add('dark');
 
 // AOS Animation Init
 AOS.init({
-  duration: 900,
+  duration: 1100,
   once: true,
   offset: 80
 });

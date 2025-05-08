@@ -6,15 +6,16 @@
     <title>Vikas Vishwakarma | Flutter Developer Portfolio</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="animations.css">
-    <link rel="icon" href="assets/flutter-icon.png">
-    <!-- AOS Animation library -->
+    <link rel="icon" href="https://img.icons8.com/color/96/flutter.png">
     <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
 </head>
 <body>
 <header>
-    <nav class="navbar">
+    <nav class="navbar glass">
         <div class="logo">
-            <img src="assets/flutter-icon.png" alt="Flutter Logo"/>
+            <img src="https://img.icons8.com/color/96/flutter.png" alt="Flutter Logo"/>
             <span>Vikas Vishwakarma</span>
         </div>
         <ul class="nav-links">
@@ -24,17 +25,23 @@
             <li><a href="#projects">Projects</a></li>
             <li><a href="#education">Education</a></li>
             <li>
-                <button id="darkToggle" title="Toggle dark mode">
-                    <span class="toggle-icon">🌙</span>
-                </button>
+                <button id="darkToggle" title="Dark mode"><span class="toggle-icon">🌙</span></button>
             </li>
         </ul>
     </nav>
 </header>
 
 <section class="hero" id="home">
-    <div class="hero-content">
-        <img class="profile-img" src="assets/profile.jpg" alt="Vikas Vishwakarma" />
+    <div class="hero-bg"></div>
+    <div class="hero-floating">
+        <img src="https://img.icons8.com/color/96/flutter.png" style="--i:0;">
+        <img src="https://img.icons8.com/color/96/android-os.png" style="--i:1;">
+        <img src="https://img.icons8.com/color/96/firebase.png" style="--i:2;">
+        <img src="https://img.icons8.com/color/96/nodejs.png" style="--i:3;">
+        <img src="https://img.icons8.com/color/96/figma--v1.png" style="--i:4;">
+    </div>
+    <div class="hero-content glass" data-aos="zoom-in">
+        <img class="profile-img" src="https://randomuser.me/api/portraits/men/75.jpg" alt="Vikas Vishwakarma" />
         <h1 id="typewriter"></h1>
         <p class="subtitle">Flutter Team Lead | Mobile & Web Developer | UI/UX Enthusiast</p>
         <div class="hero-buttons">
@@ -45,32 +52,31 @@
 </section>
 
 <main>
-    <section id="about" class="section" data-aos="fade-up">
+    <section id="about" class="section glass" data-aos="fade-up">
         <h2>About Me</h2>
         <p id="aboutText"></p>
         <div class="socials">
-            <a href="https://github.com/vikas3000" target="_blank"><img src="assets/github.svg"/></a>
-            <a href="https://linkedin.com/in/vikas-vishwakarma3000" target="_blank"><img src="assets/linkedin.svg"/></a>
-            <!-- Add more socials as needed -->
+            <a href="https://github.com/vikas3000" target="_blank"><img src="https://img.icons8.com/ios-filled/50/1976d2/github.png"/></a>
+            <a href="https://linkedin.com/in/vikas-vishwakarma3000" target="_blank"><img src="https://img.icons8.com/fluency/48/linkedin.png"/></a>
         </div>
     </section>
 
-    <section id="skills" class="section colored-section" data-aos="fade-right">
+    <section id="skills" class="section colored-section glass" data-aos="fade-right">
         <h2>Technical Skills</h2>
         <div id="skillsList" class="skills-list"></div>
     </section>
 
-    <section id="experience" class="section" data-aos="fade-left">
+    <section id="experience" class="section glass" data-aos="fade-left">
         <h2>Experience</h2>
         <div id="experienceList" class="timeline"></div>
     </section>
 
-    <section id="projects" class="section colored-section" data-aos="fade-up">
+    <section id="projects" class="section colored-section glass" data-aos="fade-up">
         <h2>Projects</h2>
         <div id="projectsList" class="projects-grid"></div>
     </section>
 
-    <section id="education" class="section" data-aos="fade-right">
+    <section id="education" class="section glass" data-aos="fade-right">
         <h2>Education</h2>
         <div id="educationList"></div>
     </section>
@@ -82,7 +88,6 @@
     </div>
 </footer>
 
-<!-- Scripts -->
 <script src="data.js"></script>
 <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
 <script src="scripts.js"></script>
