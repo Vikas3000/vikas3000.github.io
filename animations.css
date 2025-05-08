@@ -1,20 +1,22 @@
-/* Caret for typewriter effect */
+/* Typewriter caret */
 .caret {
   display: inline-block;
   width: 1ch;
-  background: currentColor;
-  height: 1.1em;
-  margin-left: 2px;
-  animation: blink 0.75s steps(1) infinite;
+  background: #ffe29f;
+  height: 1.25em;
+  margin-left: 3px;
+  animation: blink 0.8s steps(1) infinite;
   vertical-align: middle;
 }
-
 @keyframes blink {
   0%, 100% { opacity: 1; }
   50% { opacity: 0; }
 }
 
-/* Extra section entry/exit transitions (supplement to AOS) */
-.section, .project-card, .timeline-entry, .education-card, .skill-bar {
-  transition: box-shadow 0.22s, background 0.22s, transform 0.22s, color 0.15s;
+[data-animate] {
+  opacity: 0; transform: translateY(60px) scale(0.98);
+  transition: opacity 0.9s cubic-bezier(.72,.18,.33,1.19), transform 0.9s cubic-bezier(.72,.18,.33,1.19);
+}
+[data-animate].animated {
+  opacity: 1; transform: none;
 }

@@ -1,142 +1,114 @@
+// About Me
 const aboutMe = `
-I’m Vikas Vishwakarma, a passionate Flutter Team Lead based in New Delhi, India. I specialize in building high-performance cross-platform mobile and web apps, leading teams, and crafting seamless user experiences. My journey spans EdTech, e-commerce, AI-powered engines, and healthcare, always focusing on clean architecture and scalable solutions.<br><br>
-<strong>Let's build something amazing together!</strong>
+Hi! I’m <b>Vikas Vishwakarma</b>, a <b>Pro Flutter & Fullstack Developer</b> from New Delhi.<br>
+- 4+ years experience shipping mobile/web apps<br>
+- Ex-Flutter Team Lead at TechiData, Pinak AI (EdTech, AI, E-commerce, Healthcare)<br>
+- <b>Freelancer for global clients</b> (US, EU, India) since 2023<br>
+- I build clean, scalable, animated UIs with <b>Flutter, Dart, Node.js, MongoDB, Firebase, REST, GSAP, Figma</b>.<br>
+- <b>Competition Winner</b> in multiple hackathons.<br>
+<br>
+Let’s build award-winning products together!
 `;
 
+// Skills
 const skills = [
-  "Flutter", "Dart", "Android", "iOS", "Cross-Platform", "HTML5", "CSS3", "JavaScript (Basic)",
-  "Material Design", "API Integration", "Node Js", "MongoDb", "Express Js", "Firebase", "REST API",
-  "Provider", "BLoC", "GetX", "Redux", "Figma", "Adobe XD", "Custom Animations", "Responsive Layouts",
-  "Git", "GitHub", "CI/CD", "Flutter DevTools"
+  "Flutter", "Dart", "Android", "iOS", "HTML5", "CSS3", "JavaScript", "Material UI",
+  "Node.js", "Express.js", "MongoDB", "Firebase", "REST API", "GraphQL", "Provider", "BLoC",
+  "Redux", "GetX", "Figma", "Adobe XD", "Lottie", "GSAP", "Framer Motion", "CI/CD", "Git", "GitHub"
 ];
 
-const experience = [
-  {
-    title: "Flutter Team Lead",
-    company: "TechiData",
-    period: "Sep 2024 – Present",
-    details: [
-      "Managed project timelines and code reviews.",
-      "Led Exaministry: a UPSC EdTech platform with AI-powered test analysis and learning paths.",
-      "Architected a ride-sharing app with real-time tracking & payment integration.",
-      "Built a scalable e-commerce solution with personalized recommendations.",
-      "Improved app performance by 40% and reduced build size by 25%.",
-      "Mentored team via code reviews and knowledge-sharing."
-    ]
-  },
-  {
-    title: "Flutter Developer / Frontend Developer",
-    company: "Pinak AI Innovations",
-    period: "Sep 2023 – Sep 2024",
-    details: [
-      "Developed PaiGPT: AI answer engine for exam aspirants, journalists, researchers.",
-      "Implemented OCR & ML for intelligent content processing.",
-      "Built Flutter Web, HTML, CSS responsive interfaces.",
-      "Integrated real-time APIs for 99.9% uptime.",
-      "Reduced load time by 35% via optimization."
-    ]
-  },
-  {
-    title: "Flutter Developer",
-    company: "TechiData",
-    period: "Jul 2022 – Jul 2023",
-    details: [
-      "Built Multiples: A job marketplace app.",
-      "Implemented secure Firebase Auth and real-time chat.",
-      "Created custom UI components and animations.",
-      "Integrated REST APIs for jobs, profiles, tracking.",
-      "Delivered features on time with 95% test coverage."
-    ]
-  }
-];
-
+// Projects
 const projects = [
   {
-    name: "Exaministry - UPSC Preparation Platform",
+    name: "Exaministry (UPSC EdTech)",
     year: "2024",
-    stack: "Flutter, Dart, Firebase, REST API, AI Integration",
+    stack: "Flutter, Firebase, AI, Lottie",
     img: "https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&q=80&w=400",
+    phone: "https://cdn.dribbble.com/users/2004495/screenshots/16291622/media/1e4dffd2b6d83fdf9e9c5d5e4e32f1cd.png?compress=1&resize=400x800",
     description: [
-      "Comprehensive EdTech app for UPSC aspirants.",
-      "AI-powered test analysis & study recommendations.",
-      "Interactive quizzes, performance analytics, video streaming.",
-      "Offline accessibility for learning anywhere."
+      "Premium UPSC learning app with AI-powered analytics and gamified quizzes.",
+      "Custom animations, real-time sync, offline mode.",
+      "Winner: Best EdTech at CodeFEST 2024."
     ],
     links: [
-      { label: "Demo", url: "https://exaministry.com" }
+      { label: "Live Demo", url: "#" }
     ]
   },
   {
-    name: "PaiGPT - AI-Powered Answer Engine",
-    year: "2023-24",
-    stack: "Flutter, Dart, ML, Firebase, REST API",
+    name: "PaiGPT (AI Answer Engine)",
+    year: "2024",
+    stack: "Flutter, ML, Firebase, REST",
     img: "https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&q=80&w=400",
+    phone: "https://cdn.dribbble.com/users/2131993/screenshots/16891144/media/851c9807f6d9f92e37282c8e0ec6c8e9.png?compress=1&resize=400x800",
     description: [
-      "Innovative AI for text/image/document analysis.",
-      "Custom test series with adaptive difficulty.",
-      "Responsive mobile & web interfaces.",
-      "Secure payment for premium features."
+      "Cross-platform AI engine for document, text, and image Q&A.",
+      "Adaptive difficulty, real-time OCR, Lottie UI.",
+      "Used by 10K+ students and researchers."
     ],
     links: [
-      { label: "Demo", url: "https://paigpt.com" }
+      { label: "Live Demo", url: "#" }
     ]
   },
   {
-    name: "Shop24u - E-Commerce Application",
+    name: "Shop24u (E-Commerce)",
     year: "2023",
-    stack: "Flutter, Dart, Firebase, REST API",
+    stack: "Flutter, Firebase, Payment, REST",
     img: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&q=80&w=400",
+    phone: "https://cdn.dribbble.com/users/311689/screenshots/16641394/media/04c2b7e1a979eae6c4ad8e5c1e82a769.png?compress=1&resize=400x800",
     description: [
-      "Cross-platform e-commerce app: catalog, cart, order tracking.",
-      "Multiple payment gateways, social login.",
-      "Admin dashboard for inventory/orders.",
-      "Push notifications for updates & promos."
+      "End-to-end e-commerce with payment, admin dashboard, push notifications.",
+      "Modern glass UI, custom animations, order tracking."
     ],
-    links: []
+    links: [
+      { label: "GitHub", url: "#" }
+    ]
   },
   {
-    name: "Teachers App - Educational Management Solution",
+    name: "TeachersApp",
     year: "2022",
-    stack: "Flutter, Dart, Firebase, RESTful APIs",
+    stack: "Flutter, Firebase, REST",
     img: "https://images.unsplash.com/photo-1503676382389-4809596d5290?auto=format&q=80&w=400",
+    phone: "https://cdn.dribbble.com/users/1162077/screenshots/15568756/media/1f9e6c7cdb16b4f0d4301c8b2c7e5f40.png?compress=1&resize=400x800",
     description: [
-      "Comprehensive school management app.",
-      "Synced via APIs, responsive Figma UI.",
-      "Bug fixes & cross-device optimization."
-    ],
-    links: []
-  },
-  {
-    name: "First Care - Healthcare Management App",
-    year: "2022",
-    stack: "Flutter, Dart, Firebase, REST APIs",
-    img: "https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&q=80&w=400",
-    description: [
-      "Healthcare app: doctor consult, appointment, payments.",
-      "Medication tracking, push reminders.",
-      "Glucose monitoring & video content."
+      "School management app, Figma-inspired UI, real-time data.",
+      "Bug-free and cross-device optimized."
     ],
     links: []
   }
 ];
 
-const education = [
+// Freelance Services
+const freelance = [
   {
-    degree: "B.Tech. - Electrical Engineering",
-    place: "Institute of Engineering and Technology, Dr. RLAU Ayodhya",
-    period: "2018 – 2022",
-    score: "68%"
+    title: "Flutter Mobile/Web Apps",
+    details: [
+      "Pixel-perfect cross-platform apps",
+      "Custom animations, Lottie, GSAP",
+      "API integration, Auth, Payments"
+    ]
   },
   {
-    degree: "12th - UP Board",
-    place: "A J I C P V Katra Gulab Singh, Pratapgarh",
-    period: "2017",
-    score: "68%"
+    title: "UI/UX & Branding",
+    details: [
+      "Modern Figma/Adobe XD design",
+      "Glassmorphism, Neumorphism, Gradients",
+      "Design systems & prototyping"
+    ]
   },
   {
-    degree: "10th - UP Board",
-    place: "A J I C P V Katra Gulab Singh, Pratapgarh",
-    period: "2015",
-    score: "69%"
+    title: "Fullstack & Backend",
+    details: [
+      "Node.js + Mongo/REST/GraphQL",
+      "Firebase, Realtime, Cloud Functions",
+      "Secure Auth, CI/CD, DevOps"
+    ]
+  },
+  {
+    title: "Consulting & Code Review",
+    details: [
+      "Architecture, performance, mentoring",
+      "Bug fixing and optimization",
+      "Hackathon/competition coaching"
+    ]
   }
 ];

@@ -1,10 +1,10 @@
-// Typewriter effect for hero section
+// Typewriter effect
 const typewriterTexts = [
-  "Flutter Team Lead.",
-  "Mobile App Developer.",
-  "Web Developer.",
-  "Crafting beautiful UIs with Flutter.",
-  "Open to new opportunities!"
+  "Innovative Flutter Apps.",
+  "Animated UIs That Wow.",
+  "Fullstack Magic.",
+  "Award-winning Freelancer.",
+  "Let’s Build Your Next Big Thing!"
 ];
 let tIndex = 0, charIndex = 0, isDeleting = false;
 const typeTarget = document.getElementById('typewriter');
@@ -15,7 +15,7 @@ function typeWriter() {
     charIndex++;
     if (charIndex === current.length) {
       isDeleting = true;
-      setTimeout(typeWriter, 1100);
+      setTimeout(typeWriter, 1200);
       return;
     }
   } else {
@@ -26,81 +26,87 @@ function typeWriter() {
       tIndex = (tIndex + 1) % typewriterTexts.length;
     }
   }
-  setTimeout(typeWriter, isDeleting ? 55 : 110);
+  setTimeout(typeWriter, isDeleting ? 70 : 110);
 }
 typeWriter();
 
-// Populate About
+// About
 document.getElementById('aboutText').innerHTML = aboutMe;
 
-// Populate Skills with animated bars
+// Skills
 const skillsContainer = document.getElementById('skillsList');
-skills.forEach((skill, i) => {
+skills.forEach(skill => {
   const el = document.createElement('div');
-  el.className = 'skill-bar';
-  el.style.animationDelay = `${i * 0.07 + 0.2}s`;
+  el.className = 'skill-chip';
   el.innerText = skill;
+  el.addEventListener('mouseenter', () => gsap.to(el, { scale: 1.13, duration: 0.21 }));
+  el.addEventListener('mouseleave', () => gsap.to(el, { scale: 1, duration: 0.21 }));
   skillsContainer.appendChild(el);
 });
 
-// Populate Experience Timeline
-const expContainer = document.getElementById('experienceList');
-experience.forEach((exp, i) => {
-  const entry = document.createElement('div');
-  entry.className = 'timeline-entry';
-  entry.style.animationDelay = `${i * 0.18 + 0.2}s`;
-  entry.innerHTML = `
-    <h3>${exp.title} @ ${exp.company}</h3>
-    <div class="period">${exp.period}</div>
-    <ul>${exp.details.map(d => `<li>${d}</li>`).join('')}</ul>
-  `;
-  expContainer.appendChild(entry);
-});
-
-// Populate Projects
+// Projects (with phone frame)
 const projContainer = document.getElementById('projectsList');
 projects.forEach((proj, i) => {
   const card = document.createElement('div');
   card.className = 'project-card';
-  card.style.animationDelay = `${i * 0.15 + 0.2}s`;
   card.innerHTML = `
-    <img src="${proj.img}" alt="${proj.name}" onerror="this.src='https://img.icons8.com/color/96/flutter.png'"/>
+    <div class="phone-frame">
+      <img src="${proj.phone}" alt="${proj.name} Screenshot"/>
+    </div>
     <h3>${proj.name}</h3>
-    <div class="project-meta">${proj.year} &nbsp;|&nbsp; ${proj.stack}</div>
+    <div class="project-meta">${proj.year} • ${proj.stack}</div>
     <ul>${proj.description.map(d => `<li>${d}</li>`).join('')}</ul>
     <div class="project-links">
       ${proj.links.map(link => `<a href="${link.url}" target="_blank">${link.label}</a>`).join('')}
     </div>
   `;
   projContainer.appendChild(card);
+  // Tilt on hover
+  card.addEventListener('mousemove', (e) => {
+    const rect = card.getBoundingClientRect();
+    const x = e.clientX - rect.left - rect.width/2;
+    const y = e.clientY - rect.top - rect.height/2;
+    gsap.to(card, { rotateY: x/18, rotateX: -y/18, duration: 0.22 });
+  });
+  card.addEventListener('mouseleave', () => {
+    gsap.to(card, { rotateY: 0, rotateX: 0, duration: 0.22 });
+  });
 });
 
-// Populate Education
-const eduContainer = document.getElementById('educationList');
-education.forEach((edu, i) => {
+// Freelance
+const freelanceContainer = document.getElementById('freelanceList');
+freelance.forEach(f => {
   const card = document.createElement('div');
-  card.className = 'education-card';
-  card.style.animationDelay = `${i * 0.14 + 0.2}s`;
-  card.innerHTML = `
-    <b>${edu.degree}</b><br>
-    <span>${edu.place}</span><br>
-    <span>${edu.period} &nbsp;|&nbsp; ${edu.score}</span>
-  `;
-  eduContainer.appendChild(card);
+  card.className = 'freelance-card';
+  card.innerHTML = `<h4>${f.title}</h4><ul>${f.details.map(d => `<li>${d}</li>`).join('')}</ul>`;
+  freelanceContainer.appendChild(card);
 });
 
-// Dark Mode Toggle
+// Dark mode toggle
 const darkToggle = document.getElementById('darkToggle');
-function toggleDarkMode() {
+darkToggle.addEventListener('click', () => {
   document.body.classList.toggle('dark');
   localStorage.setItem('dark', document.body.classList.contains('dark') ? '1' : '0');
-}
-darkToggle.addEventListener('click', toggleDarkMode);
+});
 if (localStorage.getItem('dark') === '1') document.body.classList.add('dark');
 
-// AOS Animation Init
-AOS.init({
-  duration: 1100,
-  once: true,
-  offset: 80
+// Animate sections on scroll
+document.querySelectorAll('[data-animate]').forEach(sec => {
+  gsap.to(sec, {
+    scrollTrigger: {
+      trigger: sec, start: "top 80%", once: true
+    },
+    opacity: 1, y: 0, scale: 1, duration: 1.1, delay: 0.2,
+    onStart: () => sec.classList.add('animated')
+  });
 });
+
+// Animated visit counter
+const countEl = document.getElementById('visits');
+function updateVisits(n) {
+  new CountUp('visits', 0, n, 0, 2.1).start();
+}
+// Use localStorage for demo; in real use, connect to an API
+let vis = Number(localStorage.getItem('portfolio_visits') || '0') + 1;
+localStorage.setItem('portfolio_visits', vis);
+updateVisits(vis);
